@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StreamChat</title>
+  </head>
+  <body>
+    <div id="messages-container">
+      <% @messages.each do |message| %>
+        <div class="message-bubble"><%= message.content %></div>
+      <% end %>
+    </div>
+  </body>
+</html>

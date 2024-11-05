@@ -1,0 +1,42 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#message-input {
+margin: 20px;
+}
+
+#messages-container {
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding: 20px;
+}
+
+.message-bubble {
+background-color: #4c6ef5;
+color: white;
+padding: 10px 20px;
+border-radius: 20px;
+font-size: 1.2rem;
+max-width: 60%;
+align-self: flex-start;
+animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}

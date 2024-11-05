@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>StreamChat</title>
+    </head>
+    <body>
+        <div id="message-input">
+            <%= form_with(url: messages_path, method: :post, remote: true) do |form| %>
+                <%= form.text_field :content, placeholder: "Enter a message", required: true, name: "message[content]", id: "message_content" %>
+                <%= form.submit "Send" %>
+            <% end %>
+        </div>
+    </body>
+</html>
